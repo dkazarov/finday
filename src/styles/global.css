@@ -1,0 +1,67 @@
+html {
+  min-width: 320px;
+  background: var(--color-bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: var(--space-4) var(--page-padding);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  color: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* ========================================
+   Mobile First
+   ======================================== */
+
+@media (min-width: 768px) {
+  :root {
+    --page-padding: 1.5rem;
+  }
+
+  #app {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --page-padding: 2rem;
+  }
+}
