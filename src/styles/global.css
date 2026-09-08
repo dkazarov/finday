@@ -1,13 +1,15 @@
 html {
   min-width: 320px;
-  background: var(--color-bg);
+  background: var(--color-background);
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
 
-  background: var(--color-bg);
+  margin: 0;
+
+  background: var(--color-background);
   color: var(--color-text-primary);
 
   font-family: var(--font-family);
@@ -23,7 +25,8 @@ body {
   width: 100%;
   max-width: var(--container-width);
   min-height: 100vh;
-  margin: 0 auto;
+
+  margin-inline: auto;
   padding: var(--space-4) var(--page-padding);
 }
 
@@ -42,7 +45,7 @@ button:disabled {
 
 ::selection {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-background);
 }
 
 /* ========================================
@@ -52,6 +55,7 @@ button:disabled {
 @media (min-width: 768px) {
   :root {
     --page-padding: 1.5rem;
+    --container-width: 720px;
   }
 
   #app {
@@ -63,5 +67,12 @@ button:disabled {
 @media (min-width: 1024px) {
   :root {
     --page-padding: 2rem;
+    --container-width: 900px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container-width: 1080px;
   }
 }

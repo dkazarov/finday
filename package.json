@@ -35,6 +35,7 @@
     "vite-plugin-html-inject": "^1.1.2"
   },
   "dependencies": {
+    "lucide": "^1.43.0",
     "uuid": "^14.0.2"
   }
 }

@@ -3,28 +3,17 @@
      Colors
      ======================================== */
 
-  --color-bg: #080d11;
+  --color-background: #081015;
 
-  --color-surface: #0e151a;
-  --color-surface-elevated: #131c22;
-  --color-surface-hover: #18232a;
+  --color-surface: #101a20;
+  --color-surface-hover: #18242b;
 
-  --color-border: #1b282f;
-  --color-border-light: #26353d;
+  --color-text-primary: #f5f7f8;
+  --color-text-secondary: #91a0a8;
 
-  --color-text-primary: #f4f7f8;
-  --color-text-secondary: #9aaab3;
-  --color-text-tertiary: #687780;
+  --color-accent: #20e0b2;
 
-  --color-accent: #16e6a5;
-  --color-accent-light: #42f3ba;
-  --color-accent-dark: #0cba84;
-
-  --color-income: #16e6a5;
-  --color-expense: #ff4d4d;
-
-  --color-warning: #ffb84d;
-  --color-info: #596cff;
+  --color-logo-background: #0c2825;
 
   /* ========================================
      Typography
@@ -65,6 +54,7 @@
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-13: 3.25rem;
   --space-16: 4rem;
 
   /* ========================================
@@ -94,7 +84,7 @@
      Layout
      ======================================== */
 
-  --container-width: 480px;
+  --container-width: 640px;
 
   --page-padding: clamp(1rem, 4vw, 1.5rem);
 
