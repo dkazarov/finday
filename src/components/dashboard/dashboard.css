@@ -1,0 +1,118 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--section-gap);
+}
+
+.dashboard__spending {
+  width: 100%;
+
+  padding: var(--space-4);
+
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: var(--radius-xl);
+
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard__spending-info-icon {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: var(--space-2);
+    stroke: var(--color-text-secondary);
+    height: var(--space-4);
+    width: var(--space-4);
+  }
+}
+
+.dashboard__spending-label {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+.dashboard__spending-chart {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 320 / 180;
+}
+
+.dashboard__spending-progress {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+}
+
+.dashboard__spending-arc {
+  fill: none;
+
+  stroke-width: 16;
+  stroke-linecap: round;
+}
+
+.dashboard__spending-arc--background {
+  stroke: var(--color-surface-hover);
+}
+
+.dashboard__spending-arc--progress {
+  stroke: var(--color-accent);
+
+  /*
+   * 83% прогресу.
+   * Поки значення статичне.
+   * Пізніше його буде змінювати TypeScript.
+   */
+  stroke-dasharray: 392;
+  stroke-dashoffset: 67;
+}
+
+.dashboard__spending-content {
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  padding-top: var(--space-5);
+
+  text-align: center;
+}
+
+.dashboard__spending-amount {
+  margin: var(--space-2) 0 0;
+
+  color: var(--color-text-primary);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.04em;
+}
+
+.dashboard__spending-planned {
+  margin: var(--space-2) 0 0;
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+.dashboard__spending-percent {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  span {
+    color: var(--color-accent);
+  }
+}

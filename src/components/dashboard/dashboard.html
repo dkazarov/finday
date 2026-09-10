@@ -1,0 +1,38 @@
+<section class="dashboard" aria-label="Фінансовий огляд">
+  <section class="dashboard__spending">
+    <div class="dashboard__spending-info-icon">
+      <i data-lucide="info"></i>
+      <p class="dashboard__spending-label">Сьогодні ти можеш витратити</p>
+    </div>
+
+    <div class="dashboard__spending-chart">
+      <svg
+        class="dashboard__spending-progress"
+        viewBox="0 0 320 180"
+        aria-hidden="true"
+      >
+        <!-- Фонова дуга -->
+        <path
+          class="dashboard__spending-arc dashboard__spending-arc--background"
+          d="M 35 150 A 125 125 0 0 1 285 150"
+        />
+
+        <!-- Прогрес -->
+        <path
+          class="dashboard__spending-arc dashboard__spending-arc--progress"
+          d="M 35 150 A 125 125 0 0 1 285 150"
+        />
+      </svg>
+
+      <div class="dashboard__spending-content">
+        <p class="dashboard__spending-amount">₴ 1 240</p>
+
+        <p class="dashboard__spending-planned">
+          з ₴ 1 500 заплановано на сьогодні
+        </p>
+        <span class="dashboard__spending-percent"> 83% <span>використано</span></span>
+    </div>
+
+    </div>
+  </section>
+</section>
