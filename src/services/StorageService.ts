@@ -1,17 +1,17 @@
-import type { BudgetInput } from '../models/finance';
+import type { FinancialPlan } from '../models/financialPlan';
 
-const BUDGET_KEY = 'finday-budget';
+const FINANCIAL_PLAN_KEY = 'finday-financial-plan';
 
-export function saveBudget(budget: BudgetInput): void {
-  localStorage.setItem(BUDGET_KEY, JSON.stringify(budget));
+export function saveFinancialPlan(financialPlan: FinancialPlan): void {
+  localStorage.setItem(FINANCIAL_PLAN_KEY, JSON.stringify(financialPlan));
 }
 
-export function getBudget(): BudgetInput | null {
-  const data = localStorage.getItem(BUDGET_KEY);
+export function getFinancialPlan(): FinancialPlan | null {
+  const data = localStorage.getItem(FINANCIAL_PLAN_KEY);
 
   if (!data) {
     return null;
   }
 
-  return JSON.parse(data) as BudgetInput;
+  return JSON.parse(data) as FinancialPlan;
 }

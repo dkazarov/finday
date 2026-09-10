@@ -1,21 +1,22 @@
-import { initializeIcons } from './icons/icons';
 import './styles/main.css';
-import { calculateBudget } from './services/budgetService';
-import { budgetInput } from './data/budgetData';
-import { saveBudget, getBudget } from './services/StorageService';
+
+import { initializeIcons } from './icons/icons';
+import { calculateDailySpending } from './services/financialPlanService';
+import { getFinancialPlan, saveFinancialPlan } from './services/storageService';
+import { financialPlanData } from './data/financialPlanData';
 
 initializeIcons();
 
-let savedBudget = getBudget();
+let financialPlan = getFinancialPlan();
 
-if (!savedBudget) {
-  saveBudget(budgetInput);
-  savedBudget = budgetInput;
+if (!financialPlan) {
+  saveFinancialPlan(financialPlanData);
+  financialPlan = financialPlanData;
 }
 
-console.log('Збережений бюджет:', savedBudget);
+console.log('Фінансовий план:', financialPlan);
 
-const budgetResult = calculateBudget(savedBudget);
+const dailySpending = calculateDailySpending(financialPlan);
 
-console.log('Результат:', budgetResult);
-console.log('Сьогодні можна витратити:', budgetResult.dailyAmount);
+console.log('Результат:', dailySpending);
+console.log('Сьогодні можна витратити:', dailySpending.amount);
