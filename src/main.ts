@@ -1,21 +1,11 @@
 import { initializeIcons } from './icons/icons';
 import './styles/main.css';
-
-// Luicsd icons
-initializeIcons();
-
-import type { BudgetInput } from './models/finance';
 import { calculateBudget } from './services/budgetService';
+import { budgetInput } from './data/budgetData';
 
-const budgetInput: BudgetInput = {
-  balance: 10000,
-  plannedExpenses: 2000,
-  daysRemaining: 5,
-};
+initializeIcons();
 
 const budgetResult = calculateBudget(budgetInput);
 
-console.log(
-  'Сьогодні можна витратити:',
-  budgetResult.dailyAmount,
-);
+console.log(budgetResult);
+console.log(budgetResult.dailyAmount);
