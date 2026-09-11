@@ -5,4 +5,5 @@ export const financialPlanData: FinancialPlan = {
   mode: 'financial-space',
   financialHorizon: 21,
   nextIncomeDate: null,
+  cycleStartDate: '2026-09-11',
 };

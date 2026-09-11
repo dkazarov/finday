@@ -5,6 +5,7 @@ export interface FinancialPlan {
   mode: FinancialMode;
   financialHorizon: number | null;
   nextIncomeDate: string | null;
+  cycleStartDate: string;
 }
 
 export interface DailySpending {
