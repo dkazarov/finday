@@ -1,7 +1,7 @@
 import './styles/main.css';
 
 import { initializeIcons } from './icons/icons';
-import { getFinancialPlan, saveFinancialPlan } from './services/storageService';
+import { getFinancialPlan, saveFinancialPlan } from './services/іtorageService';
 import { financialPlanData } from './data/financialPlanData';
 
 initializeIcons();
